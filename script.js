@@ -1,0 +1,20 @@
+document.getElementById("registrationForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let message = document.getElementById("message");
+
+    if (password !== confirmPassword) {
+        message.style.color = "red";
+        message.innerText = "Passwords do not match!";
+        return;
+    }
+
+    message.style.color = "green";
+    message.innerText = "Registration Successful!";
+
+});
